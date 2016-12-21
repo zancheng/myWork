@@ -1,0 +1,45 @@
+总结了3种省略方式
+1.单行超出省略
+2.支持非IE得多行之后省略
+3.支持所有主流浏览器的多行省略
+
+---------------
+ 单行：
+ 
+ p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+    overflow: hidden;
+ }
+ 
+ 支持非IE：
+ 
+ p{
+ 		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+ }
+ 
+ 支持主流浏览器：
+ 
+ p{
+ 		font-size: 14px;
+    width: 500px;
+    position: relative;
+    line-height: 1.4em;
+    height: 2.8em;
+    overflow: hidden;
+ }
+ p::after{
+ 		content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    padding-left: 0.2em;
+ }
+ 
+ 
