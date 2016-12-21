@@ -1,0 +1,100 @@
+<!DOCTYPE html >
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>文字超过两行或三行就显示省略号</title>
+    <style type="text/css">
+        p{font-size: 14px;font-family: "Microsoft YaHei", sans-serif;color: gray;}
+        /*支持非IE*/
+        .p1{
+            width: 500px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        /*单行*/
+        .p2{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 500px;
+            overflow: hidden;
+        }
+        /*所有主流浏览器*/
+        .p3{
+            font-size: 14px;
+            width: 500px;
+            position: relative;
+            line-height: 1.4em;
+            height: 2.8em;
+            overflow: hidden;
+        }
+        .p3::after{
+            content: "...";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #FFF;
+            padding-left: 0.2em;
+        }
+    </style>
+</head>
+<body>
+<p>/*支持非IE</p>
+<p>缺点：IE不兼容</p>
+<p>优点：美观，可用于移动端*/</p>
+<pre>
+    .p1{
+        width: 500px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+</pre>
+<p class="p1">
+    动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感
+</p>
+<p>/*单行</p>
+<p>缺点：不适用于多行之后的省略</p>
+<p>优点：美观，可用于单行省略*/</p>
+<pre>
+    .p2{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 500px;
+        overflow: hidden;
+    }
+</pre>
+<p class="p2">
+    动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感
+</p>
+<p>/*所有主流浏览器：</p>
+<p>缺点：会出现最后面的一个字被尾部‘...’覆盖尾部</p>
+<p>优点：支持所有主流浏览器*/</p>
+<pre>
+    .p3{
+        font-size: 14px;
+        width: 500px;
+        position: relative;
+        line-height: 1.4em;
+        height: 2.8em;
+        overflow: hidden;
+    }
+    .p3::after{
+        content: "...";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #FFF;
+        padding-left: 0.2em;
+    }
+</pre>
+<p class="p3">
+    动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感动机客户赶快交电话费开发将对方很高科技的化工科技和登记客户对方更好看的恢复规划的国际化考核得分科技化工等客观和登记和高科技好读后感京东框架读后感
+</p>
+</body>
+</html>
